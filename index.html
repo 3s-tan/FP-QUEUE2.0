@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"     
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FP Programming Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="header">
+
+            <div class="header-title">
+                <h1>Flying Probe Programming Dashboard</h1>
+
+                <p>
+                    Board programming status and queue monitoring
+                </p>
+            </div>
+
+            <div class="header-actions">
+
+                <div
+                    id="currentDateTime"
+                    class="date-time"
+                >
+                    Loading...
+                </div>
+
+                <button
+                    type="button"
+                    id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Switch to dark mode"
+                >
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             CLICKABLE SUMMARY CARDS
+        ====================================== -->
+
+        <main>
+
+            <section
+                class="summary-grid"
+                aria-label="Board status summary"
+            >
+
+                <button
+                    type="button"
+                    class="summary-card total-card"
+                    data-view="total"
+                    aria-controls="contentPanel"
+                    aria-expanded="false"
+                >
+                    <span class="card-icon total-icon">
+                        ▦
+                    </span>
+
+                    <span class="card-information">
+                        <span class="card-label">
+                            Total
+                        </span>
+
+                        <strong id="totalCount">
+                            0
+                        </strong>
+
+                        <small>
+                            All boards
+                        </small>
+                    </span>
+
+                    <span class="view-label">
+                        View details
+                    </span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="summary-card queue-card"
+                    data-view="queue"
+                    aria-controls="contentPanel"
+                    aria-expanded="false"
+                >
+                    <span class="card-icon queue-icon">
+                        ≡
+                    </span>
+
+                    <span class="card-information">
+                        <span class="card-label">
+                            Queue
+                        </span>
+
+                        <strong id="queueCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Waiting boards
+                        </small>
+                    </span>
+
+                    <span class="view-label">
+                        View details
+                    </span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="summary-card ongoing-card"
+                    data-view="ongoing"
+                    aria-controls="contentPanel"
+                    aria-expanded="false"
+                >
+                    <span class="card-icon ongoing-icon">
+                        ▶
+                    </span>
+
+                    <span class="card-information">
+                        <span class="card-label">
+                            Ongoing
+                        </span>
+
+                        <strong id="ongoingCount">
+                            0
+                        </strong>
+
+                        <small>
+                            In progress
+                        </small>
+                    </span>
+
+                    <span class="view-label">
+                        View details
+                    </span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="summary-card completed-card"
+                    data-view="completed"
+                    aria-controls="contentPanel"
+                    aria-expanded="false"
+                >
+                    <span class="card-icon completed-icon">
+                        ✓
+                    </span>
+
+                    <span class="card-information">
+                        <span class="card-label">
+                            Completed
+                        </span>
+
+                        <strong id="completedCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Available programs
+                        </small>
+                    </span>
+
+                    <span class="view-label">
+                        View details
+                    </span>
+                </button>
+
+            </section>
+
+
+            <!-- =================================
+                 DYNAMIC CONTENT AREA
+            ================================== -->
+
+            <section
+                id="contentPanel"
+                class="content-panel"
+                aria-live="polite"
+                hidden
+            >
+
+                <div class="content-header">
+
+                    <div>
+                        <p
+                            id="contentEyebrow"
+                            class="content-eyebrow"
+                        >
+                            BOARD DETAILS
+                        </p>
+
+                        <h2 id="contentTitle">
+                            Board Information
+                        </h2>
+
+                        <p
+                            id="contentDescription"
+                            class="content-description"
+                        >
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="closeContent"
+                        class="close-content"
+                        aria-label="Close details"
+                        title="Close details"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+                <div
+                    id="contentArea"
+                    class="content-area"
+                >
+                    <!-- Generated by JavaScript -->
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer class="footer">
+
+            <div class="system-status">
+                <span class="status-indicator"></span>
+                Tester Board Repair Group - TBRG
+            </div>
+
+            <p id="lastUpdated">
+                Last updated: --
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
