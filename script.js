@@ -78,7 +78,7 @@ IN-PROGRESS PO MGA SERRRRRRR
         stage: "Quick Test",
         progress: 90,
         priority: "High",
-        targetWorkWeek: "WW50",
+        targetWorkWeek: "WW47",
         programAvailable: ""
     },
 /* =========================================
