@@ -71,6 +71,16 @@ IN-PROGRESS PO MGA SERRRRRRR
         targetWorkWeek: "WW50",
         programAvailable: ""
     },
+     {
+        id: 5,
+        boardName: "INTERFACE BOARD",
+        status: "Ongoing",
+        stage: "Quick Test",
+        progress: 90,
+        priority: "High",
+        targetWorkWeek: "WW50",
+        programAvailable: ""
+    },
 /* =========================================
 QUEUE -KWEWE NGANIIII
 ========================================= */
